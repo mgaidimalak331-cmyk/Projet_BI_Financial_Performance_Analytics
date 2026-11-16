@@ -1,0 +1,25 @@
+-- Créer une table calendrier dans Power BI :
+Calendar = CALENDAR(MIN(fact_sales[sale_date]), MAX(fact_sales[sale_date]))
+-- Ajouter les colonnes :
+Year = YEAR(Calendar[Date])
+Month Number = MONTH(Calendar[Date])
+Month = FORMAT(Calendar[Date], "MMM")
+YearMonth = FORMAT(Calendar[Date], "YYYY-MM")
+
+-- Mesures principales
+Chiffre d'affaires = SUM(fact_sales[revenue])
+Coût des ventes = SUM(fact_sales[cost])
+Bénéfice brut = [Chiffre d'affaires] - [Coût des ventes]
+Marge (%) = DIVIDE([Bénéfice brut], [Chiffre d'affaires], 0)
+Quantités vendues = SUM(fact_sales[quantity])
+Nombre de ventes = DISTINCTCOUNT(fact_sales[sale_id])
+Dépenses opérationnelles = SUM(fact_expense[amount])
+Résultat après dépenses = [Bénéfice brut] - [Dépenses opérationnelles]
+Panier moyen = DIVIDE([Chiffre d'affaires], DISTINCTCOUNT(fact_sales[customer_id]), 0)
+
+-- Objectifs
+Objectif de vente = SUM(fact_target[sales_target])
+Écart objectif = [Chiffre d'affaires] - [Objectif de vente]
+Taux réalisation (%) = DIVIDE([Chiffre d'affaires], [Objectif de vente], 0)
+
+-- Conseil : vérifier les relations et le contexte de filtre avant d'interpréter les mesures.

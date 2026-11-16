@@ -1,0 +1,13 @@
+product_id,product_name,category,unit_price,unit_cost
+1,Laptop,Informatique,1398.77,886.97
+2,Clavier,Informatique,1549.01,1086.35
+3,Souris,Informatique,192.16,148.67
+4,Ecran,Informatique,1376.02,996.76
+5,Mixeur,Maison,252.4,160.8
+6,Lampe,Maison,683.17,519.86
+7,Aspirateur,Maison,1167.86,857.11
+8,Bouilloire,Maison,812.06,470.25
+9,Chaise,Bureau,1009.39,541.63
+10,Bureau,Bureau,1494.05,1022.28
+11,Imprimante,Bureau,1370.61,839.06
+12,Papier,Bureau,1747.99,1314.86

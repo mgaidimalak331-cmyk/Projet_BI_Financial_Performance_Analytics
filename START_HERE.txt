@@ -1,0 +1,9 @@
+COMMENCE ICI
+1) Lis README.md.
+2) Installe les dépendances : pip install -r requirements.txt
+3) Configure .env à partir de .env.example.
+4) Exécute sql/schema.sql dans MySQL.
+5) Lance python python/clean_data.py
+6) Lance python python/load_mysql.py
+7) Construis le rapport en suivant powerbi/dashboard_specification.md.
+Les données sont synthétiques et les montants sont des unités fictives.
